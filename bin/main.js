@@ -9,6 +9,8 @@ var log = require('../lib/log');
 
 var subcmd = args.shift();
 var fpath = path.join('../lib', subcmd + '.js');
+
+
 fs.stat(path.join(__dirname, fpath), function(e, stat) {
     if (e) {
         if (e.code == 'ENOENT') {
@@ -17,8 +19,14 @@ fs.stat(path.join(__dirname, fpath), function(e, stat) {
             log.error(e);
         }
     }else if (stat){
-        require('../lib/'+ subcmd).run(function(err) {
-            log.fatal(err);
-        });
+
+        var cmd = require('../lib/'+ subcmd);
+        if (!cmd.run) {
+            log.error('There is no command: ' + subcmd);
+        }else
+            require('../lib/'+ subcmd).run(function(err) {
+                if (err)
+                    log.fatal(err);
+            });
     }
 });

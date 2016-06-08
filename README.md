@@ -1,69 +1,102 @@
-# Tinit - A tool to init your projects from template
+# Pinit - A tool to init your projects from scaffold
 
-Tinit is a tool that help you to create new project with templates across programming languages. It's not bind to any language specified structure, but all based on templates. You can create your own templates or using any existing project as templates.
+`Pinit`` is a tool that help you to create new project with scaffolds across programming languages. It's not bind to any language specified structure, but all based on scaffolds. You can create your own scaffolds or using any existing projects.
 
 
 # Usage
 
-## Operate on templates locally
+## Operate on scaffolds locally
 
 ```
 # from git repository
-$ tinit add node https://github.com/test/test.git
+$ pinit add node https://github.com/test/test.git
 
 # from local directly
-$ tinit add node ./path/to/local/project
+$ pinit add node ./path/to/local/project
 
-# remove templates
-$ tinit remove node
+# remove scaffolds
+$ pinit remove node
 or 
-$ tinit rm node
+$ pinit rm node
 
 # rename oldname newname
-$ tinit rename node mynodeproj
+$ pinit rename node mynodeproj
 ```
 
 
-## Use template to create new project
+## Use scaffold to create new project
 
 ```
 # preferred, use configured template name
-$ tinit new node myproject
+$ pinit new node myproject
 
-$ tinit new ./path/to/local/template myproject
 ```
+
+
+## Config variables
+
+```
+# add new global variable
+$ sinit config set user.name yourname
+
+# remove variable
+$ sinit config unset user.name
+```
+
+
+
+# Template
+
+*Sinit* uses mustache as template engine with some new formats. All variables with '.' seperated style will be translated into question messages. 
+Also you can put your custom prompts with '|' splitted, `{prop.name}|prompt text` like `user.email|Provide user's email`.
+For example:
+
+```
+Hello, {{user.name}}
+# will ask user with prompt message: User name:
+
+My email is {{user.email|Provide user's email}}
+# will ask user with prompt message: Provide user's email
+```
+
 
 
 # Configuration
 
-Tinit will setup a configuration folder in your home directory with js/json format
+Sinit will setup a configuration folder in your home directory with js/json format
 
 ```
-+ /home/{user}/.tinit/
++ /home/{user}/.sinit/
     + config.json // or config.js
-    + templates/
+    + scaffolds/
         + node/
         + java/
         + go/
     + engines/
 ```
 
-`config.json` will be looked like following:
+`config.json` contains global default values and settings that differed in scaffolds. It will be looked like following:
 
 ```
 module.exports = 
 {
-    prompt: "",
-    escape: ""
+    defaults: {
+        'user.name': 'yourname'
+    },
+    scaffolds: {
+        someScaffold: {
+            encoding: 'gbk'
+        }
+    }
 };
 ```
 
-And also you can put `.tinitrc` in your template folder, which will overwrite the configures globally.
+And also you can put `.sinitrc` in your template folder, which will overwrite the configures globally.
 
 
 # Why node
 
-Many create templating packages, a great developer community to reuse the wonderful packages that already available in npm, which make me build tinit so fast. And also with better cli and cross-platform supports.
+Many create templating packages, a great developer community to reuse the wonderful packages that already available in npm, which make me build sinit so fast. And also with better cli and cross-platform supports.
 
 
 # License
