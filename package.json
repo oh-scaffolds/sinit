@@ -1,0 +1,45 @@
+{
+  "name": "tinit",
+  "version": "0.1.0",
+  "description": "Project initializer based on templates",
+  "main": "index.js",
+  "bin": {
+    "tinit": "./bin/main.js"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/babel src -d lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "project",
+    "initializer",
+    "templates"
+  ],
+  "engine": {
+    "node": ">=0.8.0"
+  },
+  "author": "villadora <jky239@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.5.2",
+    "colors": "^1.1.2",
+    "git-url-parse": "^6.0.3",
+    "glob": "^7.0.3",
+    "ignore": "^3.1.2",
+    "inquirer": "^1.0.3",
+    "is-url": "^1.2.1",
+    "mkdirp": "^0.5.1",
+    "mustache": "^2.2.1",
+    "osenv": "^0.1.3",
+    "rimraf": "^2.5.2",
+    "through2": "^2.0.1",
+    "underscore": "^1.8.3",
+    "yargs": "^4.7.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}

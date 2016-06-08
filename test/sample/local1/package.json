@@ -1,0 +1,26 @@
+{
+  "name": "{{project.name}}",
+  "version": "0.0.1,
+  "description": "{{project.desc}}",
+  "keywords": [
+  ],
+  "homepage": "https://github.com/{{user.name}}/{{project.name}}",
+  "author": "{{user.name}} <{{user.email}}>",
+  "contributors": [
+    "{{user.name}} <{{user.email}}> "
+  ],
+  "license": "MIT",
+  "repository": "{{user.name}}/{{project.name}}",
+  "bin": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "^2.8.0",
+    "istanbul": "*",
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  }
+}
