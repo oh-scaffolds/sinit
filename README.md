@@ -1,6 +1,6 @@
 # Sinit - A tool to initialize your projects from scaffold
 
-`Sinit`` is a tool that help you to create new project with scaffolds across programming languages. It's not bind to any language specified structure, but all based on scaffolds. You can create your own scaffolds or using any existing projects.
+`Sinit` is a tool that help you to create new project with scaffolds across programming languages. It's not bind to any language specified structure, but all based on scaffolds. You can create your own scaffolds or using any existing projects.
 
 
 # Usage
