@@ -1,6 +1,6 @@
-# Pinit - A tool to init your projects from scaffold
+# Sinit - A tool to initialize your projects from scaffold
 
-`Pinit`` is a tool that help you to create new project with scaffolds across programming languages. It's not bind to any language specified structure, but all based on scaffolds. You can create your own scaffolds or using any existing projects.
+`Sinit`` is a tool that help you to create new project with scaffolds across programming languages. It's not bind to any language specified structure, but all based on scaffolds. You can create your own scaffolds or using any existing projects.
 
 
 # Usage
@@ -9,18 +9,18 @@
 
 ```
 # from git repository
-$ pinit add node https://github.com/test/test.git
+$ sinit add node https://github.com/test/test.git
 
 # from local directly
-$ pinit add node ./path/to/local/project
+$ sinit add node ./path/to/local/project
 
 # remove scaffolds
-$ pinit remove node
+$ sinit remove node
 or 
-$ pinit rm node
+$ sinit rm node
 
 # rename oldname newname
-$ pinit rename node mynodeproj
+$ sinit rename node mynodeproj
 ```
 
 
@@ -28,7 +28,7 @@ $ pinit rename node mynodeproj
 
 ```
 # preferred, use configured template name
-$ pinit new node myproject
+$ sinit new node myproject
 
 ```
 
@@ -90,8 +90,6 @@ module.exports =
     }
 };
 ```
-
-And also you can put `.sinitrc` in your template folder, which will overwrite the configures globally.
 
 
 # Why node
