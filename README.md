@@ -3,6 +3,13 @@
 `Sinit` is a tool that help you to create new project with scaffolds across programming languages. It's not bind to any language specified structure, but all based on scaffolds. You can create your own scaffolds or using any existing projects.
 
 
+# Install
+
+```
+npm install -g sinit
+```
+
+
 # Usage
 
 ## Operate on scaffolds locally
