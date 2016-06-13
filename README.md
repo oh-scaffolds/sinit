@@ -70,6 +70,8 @@ My email is {{user.email|Provide user's email}}
 
 # Configuration
 
+## Global Configure
+
 Sinit will setup a configuration folder in your home directory with js/json format
 
 ```
@@ -97,6 +99,13 @@ module.exports =
     }
 };
 ```
+
+## Scaffold Specified
+
+`.sinitrc` file contains rendering variables for the scaffold which it's located.
+
+`.sinitignore` contains files that only doing copy without templating.
+
 
 
 # Why node
