@@ -67,6 +67,11 @@ My email is {{user.email|Provide user's email}}
 ```
 
 
+## Creating Scaffold
+
+It's simple, copy your project, and change the filename or the file you want do templating.
+Take [nodejs](https://github.com/oh-scaffolds/nodejs) [mvn-java](https://github.com/oh-scaffolds/mvn-java) as samples.
+
 
 # Configuration
 
